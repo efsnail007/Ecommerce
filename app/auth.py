@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 
-import jwt
 import bcrypt
+import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
@@ -11,7 +11,6 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.config import ALGORITHM, SECRET_KEY
 from app.db_depends import get_async_db
 from app.models.users import User as UserModel
-
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 REFRESH_TOKEN_EXPIRE_DAYS = 7
@@ -30,7 +29,9 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     """
     Проверяет, соответствует ли введённый пароль сохранённому хешу.
     """
-    return bcrypt.checkpw(plain_password.encode("utf-8"), hashed_password.encode("utf-8"))
+    return bcrypt.checkpw(
+        plain_password.encode("utf-8"), hashed_password.encode("utf-8")
+    )
 
 
 def create_access_token(data: dict):
