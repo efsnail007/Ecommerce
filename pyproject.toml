@@ -25,3 +25,4 @@ python-multipart = "^0.0.22"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+package-mode = false

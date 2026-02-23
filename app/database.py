@@ -18,7 +18,7 @@ from sqlalchemy.orm import DeclarativeBase
 
 # Строка подключения для SQLite
 DATABASE_URL = (
-    "postgresql+asyncpg://postgres:postgres@localhost:5431/ecommerce_db"
+    "postgresql+asyncpg://postgres:postgres@localhost:5430/ecommerce_db"
 )
 
 # Создаём Engine
