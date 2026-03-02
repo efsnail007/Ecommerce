@@ -23,6 +23,7 @@ python-multipart = "^0.0.22"
 bcrypt = "^5.0.0"
 pyjwt = "^2.11.0"
 python-dotenv = "^1.2.1"
+yookassa = "^3.10.0"
 
 
 [build-system]
